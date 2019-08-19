@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %} BLOG PAGE |HOME {% endblock title%}
+{% block content %}
+{% for blog in blogs %}
+<div class="card pagination justify-content-center mx-auto mt-5 w-75">
+    <div class="card-header">{{blog.name}}</div>
+    <div class="card-body">{{blog.text}}<p>{{blog.time}}</p></div> 
+  </div>
+{% endfor %}
+{% endblock %}
